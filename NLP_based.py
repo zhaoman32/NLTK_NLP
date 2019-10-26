@@ -2,7 +2,7 @@ import nltk
 
 from nltk.book import *
 
-'''
+
 # 查找特定词及其上下文
 text1.concordance("monstrous")
 # 出现在和monstrous相似的上下文中
@@ -21,5 +21,12 @@ len(text3) / len(set(text3))
 text4.count("a") / len(text4)
 # sent1 和 text 是以链表形式储存
 print(sent1)
-'''
-
+# 创建给定样本的频率分布
+fdist = FreqDist(text4)
+# 给定样本的频率
+fdist.freq("monstrous")
+# 以递减的顺序排序
+fdist.keys()
+# 绘制频率分布表，分布图
+fdist.tabulate()
+fdist.plot()

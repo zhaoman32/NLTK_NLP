@@ -29,3 +29,10 @@ fdist.keys()
 # 绘制频率分布表，分布图
 fdist.tabulate()
 fdist.plot()
+
+# 载入自己的语料库
+from nltk.corpus import PlaintextCorpusReader
+corpus_root = '/usr/share/dict'
+wordlists = PlaintextCorpusReader(corpus_root, '.*')
+wordlists.fileids()
+wordlists.words("a.txt")
